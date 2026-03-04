@@ -1,0 +1,106 @@
+{
+	"name": "Fluence Dark",
+	"type": "dark",
+	"colors": {
+		"editor.background": "#171717",
+		"editor.foreground": "#D4D4D4",
+		"editor.lineHighlightBackground": "#222222",
+		"editorCursor.foreground": "#D4D4D4",
+		"editorWhitespace.foreground": "#333333",
+		"editorIndentGuide.background": "#2A2A2A",
+		"editorIndentGuide.activeBackground": "#555555",
+		"editorSuggestWidget.background": "#1A1A1A",
+		"editorSuggestWidget.border": "#333333",
+		
+		"activityBar.background": "#141414",
+		"activityBar.foreground": "#CCCCCC",
+		"activityBar.inactiveForeground": "#666666",
+		
+		"sideBar.background": "#1A1A1A",
+		"sideBarSectionHeader.background": "#1E1E1E",
+		"sideBarTitle.foreground": "#BBBBBB",
+		"sideBar.border": "#222222",
+		
+		"tab.activeBackground": "#171717",
+		"tab.inactiveBackground": "#1A1A1A",
+		"tab.activeForeground": "#E0E0E0",
+		"tab.inactiveForeground": "#888888",
+		"tab.border": "#222222",
+		"editorGroupHeader.tabsBackground": "#141414",
+		
+		"statusBar.background": "#1A1A1A",
+		"statusBar.foreground": "#AAAAAA",
+		"statusBar.noFolderBackground": "#1A1A1A",
+		"statusBar.border": "#222222",
+		
+		"titleBar.activeBackground": "#141414",
+		"titleBar.activeForeground": "#CCCCCC",
+		"titleBar.inactiveBackground": "#141414",
+		"titleBar.inactiveForeground": "#666666",
+
+		"menu.background": "#1A1A1A",
+		"menu.foreground": "#CCCCCC",
+		"dropdown.background": "#1A1A1A",
+		
+		"panel.background": "#1A1A1A",
+		"panel.border": "#222222",
+		"panelTitle.activeForeground": "#E0E0E0",
+		"panelTitle.inactiveForeground": "#888888"
+	},
+	"tokenColors": [
+		{
+			"name": "Fluence Keywords & Operators (Tame Pink)",
+			"scope": [
+				"keyword.control.fluence",
+				"keyword.operator.fluence",
+				"punctuation.bracket.fluence"
+			],
+			"settings": {
+				"foreground": "#D92E79",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Functions & Methods",
+			"scope": "entity.name.function.fluence",
+			"settings": {
+				"foreground": "#DCDCAA"
+			}
+		},
+		{
+			"name": "Classes & Structs",
+			"scope": "storage.type.fluence",
+			"settings": {
+				"foreground": "#4EC9B0"
+			}
+		},
+		{
+			"name": "Strings",
+			"scope": "string",
+			"settings": {
+				"foreground": "#D69D85"
+			}
+		},
+		{
+			"name": "Numbers",
+			"scope": "constant.numeric.fluence",
+			"settings": {
+				"foreground": "#B5CEA8"
+			}
+		},
+		{
+			"name": "Comments",
+			"scope": "comment",
+			"settings": {
+				"foreground": "#57A64A"
+			}
+		},
+		{
+			"name": "Variables (Identifiers)",
+			"scope": "variable.other.readwrite.fluence",
+			"settings": {
+				"foreground": "#9CDCFE"
+			}
+		}
+	]
+}

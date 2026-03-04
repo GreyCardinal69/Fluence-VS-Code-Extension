@@ -1,0 +1,38 @@
+{
+  "name": "Fluence",
+  "displayName": "Fluence Syntax",
+  "description": "Syntax highlighting and theme for the Fluence programming language.",
+  "version": "0.1.5",
+  "publisher": "Cardinalius",
+
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GreyCardinal69/Fluence"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "FluenceIcon.png",
+  "contributes": {
+    "languages": [{
+      "id": "fluence",
+      "aliases": ["Fluence", "fluence"],
+      "extensions": [".fl", ".FL", ".fluence", ".Fluence"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "fluence",
+      "scopeName": "source.fluence",
+      "path": "./syntaxes/fluence.tmLanguage.json"
+    }],
+    "themes": [
+      {
+        "label": "Dark Fluence",
+        "uiTheme": "vs-dark",
+        "path": "./themes/fluence-dark-color-theme.json"
+      }]
+  }
+}
