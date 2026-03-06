@@ -1,0 +1,242 @@
+{
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "func Main() => {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Creates the entry point function"
+  },
+  "Function (Block Body)": {
+    "prefix": "funcb",
+    "body": [
+      "func ${1:name}(${2:args}) => {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Creates a block-body function"
+  },
+  "Function (Expression Body)": {
+    "prefix": "funci",
+    "body": [
+      "func ${1:name}(${2:args}) => ${0:expression};"
+    ],
+    "description": "Creates a single-line expression function"
+  },
+  "Trait Definition": {
+    "prefix": "trait",
+    "body": [
+      "trait ${1:Name} {",
+      "\tfunc ${2:method_name}();$0",
+      "}"
+    ],
+    "description": "Creates a new trait"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If block"
+  },
+  "If / Else Statement": {
+    "prefix": "ifelse",
+    "body": [
+      "if ${1:condition} {",
+      "\t$2",
+      "} else {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If / Else block"
+  },
+  "Unless Statement": {
+    "prefix": "unless",
+    "body": [
+      "unless ${1:condition} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Unless (inverted if) block"
+  },
+  "Match Switch": {
+    "prefix": "matchs",
+    "body": [
+      "match ${1:variable} {",
+      "\t${2:pattern}:",
+      "\t\t${3:statement};",
+      "\t\tbreak;",
+      "\trest:",
+      "\t\t$0break;",
+      "}"
+    ],
+    "description": "Match statement (Switch style with break)"
+  },
+  "For In Loop": {
+    "prefix": "forin",
+    "body": [
+      "for ${1:item} in ${2:collection} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "For-In loop over a list or range"
+  },
+  "For Range Loop": {
+    "prefix": "forr",
+    "body": [
+      "for ${1:i} in ${2:0}..${3:10} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "For loop over a numeric range"
+  },
+  "Times Loop": {
+    "prefix": "times",
+    "body": [
+      "${1:10} times {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Executes a block N times"
+  },
+  "Times As Loop": {
+    "prefix": "timesas",
+    "body": [
+      "${1:10} times as ${2:i} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Executes a block N times, exposing the index"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while ${1:true} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "Try Catch Block": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch ex {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Try/Catch exception handling"
+  },
+  "Conditional Compilation": {
+    "prefix": "#if",
+    "body": [
+      "#IF ${1:SYMBOL} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Compile-time conditional block"
+  },
+  "Sequential Assignment": {
+    "prefix": "seq",
+    "body": [
+      "${1:a}, ${2:b} <~| ${3:1}, ${4:2};$0"
+    ],
+    "description": "Sequential Rest Assignment (<~|)"
+  },
+  "Reducer Pipe": {
+    "prefix": "reduce",
+    "body": [
+      "${1:list} |>>= (${2:0}, (${3:acc}, ${4:item}) => ${3:acc} + ${4:item});$0"
+    ],
+    "description": "Reducer pipe (|>>=)"
+  },
+  "Struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:Name} {",
+      "\t${2:field};",
+      "\t",
+      "\tfunc init(${2:field}) => {",
+      "\t\tself.${2:field} = ${2:field};",
+      "\t}",
+      "}"
+    ],
+    "description": "Struct definition"
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:Name} {",
+      "\t${2:Member},",
+      "}"
+    ],
+    "description": "Enum definition"
+  },
+  "Match Expression": {
+    "prefix": "match",
+    "body": [
+      "match ${1:variable} {",
+      "\t${2:pattern} -> ${3:result};",
+      "\trest -> ${4:nil};",
+      "};$0"
+    ],
+    "description": "Match expression (returns value)"
+  },
+  "Times Loop (Basic)": {
+    "prefix": "times",
+    "body": [
+      "${1:10} times {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Basic times loop"
+  },
+  "Times Loop (As Variable)": {
+    "prefix": "times",
+    "body": [
+      "${1:10} times as ${2:i} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Times loop with index variable"
+  },
+  "Times Loop (As Solid)": {
+    "prefix": "times",
+    "body": [
+      "${1:10} times as solid ${2:i} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Times loop with readonly index"
+  },
+  "Until Loop": {
+    "prefix": "until",
+    "body": [
+      "until ${1:condition} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Until loop (inverse while)"
+  },
+  "Loop (Infinite)": {
+    "prefix": "loop",
+    "body": [
+      "loop {",
+      "\t$0",
+      "\tbreak;",
+      "}"
+    ],
+    "description": "Infinite loop"
+  },
+  "Print Line": {
+    "prefix": "printl",
+    "body": [
+      "printl(${1:\"text\"});$0"
+    ],
+    "description": "Print line to console"
+  }
+}

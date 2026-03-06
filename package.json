@@ -2,9 +2,8 @@
   "name": "Fluence",
   "displayName": "Fluence Syntax",
   "description": "Syntax highlighting and theme for the Fluence programming language.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "Cardinalius",
-
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -28,6 +27,7 @@
       "scopeName": "source.fluence",
       "path": "./syntaxes/fluence.tmLanguage.json"
     }],
+    "snippets": [{"language": "fluence", "path": "./snippets/fluence.code-snippets"}],
     "themes": [
       {
         "label": "Dark Fluence",
